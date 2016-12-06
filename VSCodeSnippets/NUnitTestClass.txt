@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Nunit Test Class</Title>
+      <Shortcut>nunittestc</Shortcut>
+      <Description>Code snippet for a nunit test class</Description>
+      <Author>Mohtshm Zubair</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>		
+      <References>
+        <Reference>
+          <Assembly>nunit.framework.dll</Assembly>
+        </Reference>
+      </References>	  
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+      </Imports>
+      <Imports>
+        <Import>
+          <Namespace>NUnit.Framework</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Moq</Namespace>
+        </Import>
+        <Import>
+          <Namespace>Shop.Models</Namespace>
+        </Import>
+      </Imports>
+      <Code Language="csharp"><![CDATA[
+	   [TestFixture]
+      public class NameofClass
+      {
+          //InstanceType instance = null;
+       
+		      [SetUp]
+          public void setupForEachTest()
+          {
+              //Arrange            
+              //instance = InstanceType();
+          }
+
+          [Test]
+          public void Instance_Test_To_Verify()
+          {
+             //Act                       
+             // Object result = instance.TesttoVerify();
+             //Assert
+             // Assert.IsNotNull(result);
+
+          }
+
+
+          [TearDown]
+          public void TearDownORDisposeAfteralltests()
+          {
+          //    instance = null;
+          } 
+          
+      }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
